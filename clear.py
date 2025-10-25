@@ -13,7 +13,7 @@ df['housing'] = df['housing'].map({'yes': 1, 'no': 0})
 df['loan'] = df['loan'].map({'yes': 1, 'no': 0})
 df['Target'] = df['Target'].map({'yes': 1, 'no': 0})
 
-education_order = {'uknown': 0, 'primary': 1, 'secondary': 2, 'tertiary': 3}
+education_order = {'unknown': 0, 'primary': 1, 'secondary': 2, 'tertiary': 3}
 
 df['education'] = df['education'].map(education_order)
 
