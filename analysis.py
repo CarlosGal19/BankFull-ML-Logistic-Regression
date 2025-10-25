@@ -70,3 +70,5 @@ def boxplot(column):
 # print("\n")
 
 # boxplot(df['previous'])
+
+# graph_balance_distribution(df['education'])
