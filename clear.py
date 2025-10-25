@@ -13,11 +13,6 @@ df['housing'] = df['housing'].map({'yes': 1, 'no': 0})
 df['loan'] = df['loan'].map({'yes': 1, 'no': 0})
 df['Target'] = df['Target'].map({'yes': 1, 'no': 0})
 
-minimum_balance = df['balance'].min()
-maximum_balance = df['balance'].max()
-
-df['balance'] = (df['balance'] - minimum_balance) / (maximum_balance - minimum_balance)
-
 education_order = {'uknown': 0, 'primary': 1, 'secondary': 2, 'tertiary': 3}
 
 df['education'] = df['education'].map(education_order)
