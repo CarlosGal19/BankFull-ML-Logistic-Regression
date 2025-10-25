@@ -37,36 +37,22 @@ def graph_balance_distribution(column):
     plt.ylabel('Number of Customers')
     plt.show()
 
-def boxplot_age(column):
+def boxplot(column):
     plt.figure(figsize=(8, 6))
     plt.boxplot(column, vert=True, patch_artist=True)
-    plt.title('Boxplot of Age')
-    plt.ylabel('Age')
+    plt.title(f"{column.name} distribution boxplot")
+    plt.ylabel('Values')
     plt.show()
 
-def boxplot_balance(column):
-    plt.figure(figsize=(8, 6))
-    plt.boxplot(column, vert=True, patch_artist=True)
-    plt.title('Boxplot of Balance')
-    plt.ylabel('Balance')
-    plt.show()
-
-def boxplot_duration(column):
-    plt.figure(figsize=(8, 6))
-    plt.boxplot(column, vert=True, patch_artist=True)
-    plt.title('Boxplot of Duration')
-    plt.ylabel('Duration')
-    plt.show()
-
-# boxplot_age(df['age'])
-# boxplot_balance(df['balance'])
+# boxplot(df['age'])
+# boxplot(df['balance'])
 
 # graph_age_distribution(df['age'])
-graph_job_distribution(df['job'])
-graph_marital_status(df['marital'])
+# graph_job_distribution(df['job'])
+# graph_marital_status(df['marital'])
 # graph_balance_distribution(df['balance'])
 
-# boxplot_duration(df['duration'])
+# boxplot(df['duration'])
 
 # num_df = df.select_dtypes(include=['int64', 'float64'])
 
@@ -82,3 +68,5 @@ graph_marital_status(df['marital'])
 # print("=== Measures of Central Tendency ===")
 # print(stats_summary)
 # print("\n")
+
+# boxplot(df['previous'])
