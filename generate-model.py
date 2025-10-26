@@ -24,7 +24,7 @@ model.fit(X_train_scaled, y_train)
 y_proba = model.predict_proba(X_test_scaled)[:, 1]
 precision, recall, thresholds = precision_recall_curve(y_test, y_proba)
 
-f1_scores = 2 * (precision * recall) / np.maximum((precision + recall), 1e-6)
+f1_scores = 2 * (precision * recall) / np.maximum((precision + recall), 1e-8)
 best_threshold = thresholds[np.argmax(f1_scores)]
 
 y_pred = (y_proba >= best_threshold).astype(int)

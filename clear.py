@@ -17,4 +17,8 @@ education_order = {'unknown': 0, 'primary': 1, 'secondary': 2, 'tertiary': 3}
 
 df['education'] = df['education'].map(education_order)
 
+target_1_rows = df[df['Target'] == 1]
+df = pd.concat([df, target_1_rows, target_1_rows], ignore_index=True)
+df = pd.concat([df, target_1_rows, target_1_rows], ignore_index=True)
+
 df.to_csv('./cleaned_bank_data.csv', index=False)
